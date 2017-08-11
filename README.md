@@ -10,7 +10,7 @@ We got samples from the company (and I would like to thank them for that) and si
 This software requires:
   - libusb 1.0 (apt-get install libusb)
   
-  - Install the necessary libraries for Linux (use "install.sh" inside    /home/fuad/Desktop/3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04_x64/3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04 folder)
+  - Install the necessary libraries for Linux (use "install.sh" inside 3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04_x64/3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04 folder)
   
   - MMMReader Java interface/library (included in the soure code - "mmmreader.jar")
  in order to function normally.
