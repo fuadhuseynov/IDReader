@@ -7,7 +7,7 @@ We got samples from the company (and I would like to thank them for that) and si
 
 This software requires:
   - libusb (apt-get install libusb)
-  - MMMReader Java interface/library (included in the soure code - external java libraries)
+  - MMMReader Java interface/library (included in the soure code - "mmmreader.jar")
  in order to function normally.
  
  This software is designed specifically for IDs from Azerbaijan. It might not work well with IDs from other countries. 
