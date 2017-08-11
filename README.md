@@ -34,3 +34,6 @@ INSTRUCTIONS:
  
 This implementation assumes only 1 swap - after that the device will shut down. However, you can change it by changing the values
 of "swipeDone" boolean variable in the Reader class.
+
+
+NOTE: THE CONTENT OF 3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04_x64/3MSwipeReaderSDK_1.2.1.2_Ubuntu_16.04 FOLDER IS PROVIDED BY THE VENDOR OF 3M READER DEVICE.
