@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    
+	
+	
+<script type="text/javascript">
+        function toggleVisibility(controlId) 
+       {
+            if (controlId == 'ocr') {
+			
+				var x = document.getElementById('dataTitle').rows[0].cells;
+				x[0].innerHTML="OCR Codeline Data"
+			
+				var x0 = document.getElementById('ocr').rows[0].cells;
+				x0[0].innerHTML="Surname"
+				
+				var x1 = document.getElementById('ocr').rows[1].cells;
+				x1[0].innerHTML="Given Names(s)"
+				
+				var x2 = document.getElementById('ocr').rows[2].cells;
+				x2[0].innerHTML="Date of Birth"
+				
+				var x3 = document.getElementById('ocr').rows[3].cells;
+				x3[0].innerHTML="Gender"
+				
+				var x4 = document.getElementById('ocr').rows[4].cells;
+				x4[0].innerHTML="Nationality"
+				
+				var x5 = document.getElementById('ocr').rows[5].cells;
+				x5[0].innerHTML="Document Type"
+				
+				var x6 = document.getElementById('ocr').rows[6].cells;
+				x6[0].innerHTML="Document Number"
+				
+				var x7 = document.getElementById('ocr').rows[7].cells;
+				x7[0].innerHTML="Expiry Date"
+				
+				var x8 = document.getElementById('ocr').rows[8].cells;
+				x8[0].innerHTML="Issuer"
+			
+			} 
+			else if (controlId == 'msr') {
+				var x = document.getElementById('dataTitle').rows[0].cells;
+				x[0].innerHTML="Magnetic Stripe Data"				
+				
+				var x0 = document.getElementById('ocr').rows[0].cells;
+				x0[0].innerHTML="Track 1"
+				
+				var x1 = document.getElementById('ocr').rows[1].cells;
+				x1[0].innerHTML=""
+				
+				var x2 = document.getElementById('ocr').rows[2].cells;
+				x2[0].innerHTML=""
+				
+				var x3 = document.getElementById('ocr').rows[3].cells;
+				x3[0].innerHTML="Track 2"
+				
+				var x4 = document.getElementById('ocr').rows[4].cells;
+				x4[0].innerHTML=""
+				
+				var x5 = document.getElementById('ocr').rows[5].cells;
+				x5[0].innerHTML=""
+				
+				var x6 = document.getElementById('ocr').rows[6].cells;
+				x6[0].innerHTML="Track 3"
+				
+				var x7 = document.getElementById('ocr').rows[7].cells;
+				x7[0].innerHTML=""
+				
+				var x8 = document.getElementById('ocr').rows[8].cells;
+				x8[0].innerHTML=""
+				
+			}
+			else if (controlId == 'aamva') {
+				var x = document.getElementById('dataTitle').rows[0].cells;
+				x[0].innerHTML="AAMVA Magnetic Stripe Data"				
+				
+				var x0 = document.getElementById('ocr').rows[0].cells;
+				x0[0].innerHTML="Surname"
+				
+				var x1 = document.getElementById('ocr').rows[1].cells;
+				x1[0].innerHTML="Given Name(s)"
+				
+				var x2 = document.getElementById('ocr').rows[2].cells;
+				x2[0].innerHTML="Date of Birth"
+				
+				var x3 = document.getElementById('ocr').rows[3].cells;
+				x3[0].innerHTML="Gender"
+				
+				var x4 = document.getElementById('ocr').rows[4].cells;
+				x4[0].innerHTML="Nationality"
+				
+				var x5 = document.getElementById('ocr').rows[5].cells;
+				x5[0].innerHTML="Document Type"
+				
+				var x6 = document.getElementById('ocr').rows[6].cells;
+				x6[0].innerHTML="Licence Number"
+				
+				var x7 = document.getElementById('ocr').rows[7].cells;
+				x7[0].innerHTML="Expiry Date"
+				
+				var x8 = document.getElementById('ocr').rows[8].cells;
+				x8[0].innerHTML="Issuer"
+			
+			}
+			
+         }
+    </script>
+	
+	
+	
+    <script type="text/javascript">
+	
+	function readerdata(controlId)
+	{
+	
+	if (controlId == "ocr") {
+	
+		document.form1.Surname.value = MyApplet.GetSurname();
+		document.form1.GivenName.value = MyApplet.GetGivenName();
+		document.form1.DoB.value = MyApplet.GetDateOfBirth();
+		document.form1.Sex.value = MyApplet.GetSex();
+		document.form1.Nationality.value = MyApplet.GetNationality();
+		
+		document.form1.DocumentType.value = MyApplet.GetDocType();
+		document.form1.DocumentNumber.value = MyApplet.GetDocumentNumber();
+		document.form1.DoE.value = MyApplet.GetDateOfExpiry();
+		document.form1.Issuer.value = MyApplet.GetIssuer();
+		
+		document.form1.MRZ1.value = MyApplet.GetMRZ1();
+		document.form1.MRZ2.value = MyApplet.GetMRZ2();
+		document.form1.MRZ3.value = MyApplet.GetMRZ3();
+	
+	}
+	else if (controlId == "msr") {
+		
+		document.form1.Surname.value = MyApplet.GetTrack1();
+		document.form1.GivenName.value = MyApplet.GetTrack11();
+		document.form1.DoB.value = MyApplet.GetTrack111();
+		
+		document.form1.Sex.value = MyApplet.GetTrack2();
+		document.form1.Nationality.value = MyApplet.GetTrack22();
+		document.form1.DocumentType.value = MyApplet.GetTrack222();
+		
+		document.form1.DocumentNumber.value = MyApplet.GetTrack3();
+		document.form1.DoE.value = MyApplet.GetTrack33();
+		document.form1.Issuer.value = MyApplet.GetTrack333();
+		
+		document.form1.MRZ1.value = "";
+		document.form1.MRZ2.value = "";
+		document.form1.MRZ3.value = "";
+	}
+	else if (controlId == 'aamva') {
+		document.form1.Surname.value = MyApplet.GetSurname();
+		document.form1.GivenName.value = MyApplet.GetGivenName();
+		document.form1.DoB.value = MyApplet.GetDateOfBirth();
+		
+		document.form1.Sex.value = MyApplet.GetSex();
+		document.form1.Nationality.value = MyApplet.GetNationality();
+		document.form1.DocumentType.value = MyApplet.GetDocType();
+		
+		document.form1.DocumentNumber.value = MyApplet.GetLicenceNumber();
+		document.form1.DoE.value = MyApplet.GetDateOfExpiry();
+		document.form1.Issuer.value = MyApplet.GetIssuer();
+		
+		document.form1.MRZ1.value = "";
+		document.form1.MRZ2.value = "";
+		document.form1.MRZ3.value = "";
+	
+	}
+	
+	toggleVisibility(controlId);
+	
+	}
+</script>
+
+    
+    
+    <style type="text/css">
+        .clsSecuritySystemsCaption
+        {
+         text-align:left;
+         font-family: 'Arial Narrow';
+         font-size: 16px; 
+         font-weight: normal; 
+         font-style: normal; 
+         font-variant: normal; 
+         color: #808080;
+        }
+        
+        .clsProductCaption
+        {
+         text-align:left;
+         font-family: 'Arial Narrow';
+         font-size: 32px; 
+         font-weight: normal; 
+         font-style: normal; 
+         font-variant: normal; 
+         color: #FFFFFF;
+        }
+         .clsProductCaptionTM
+        {
+         text-align:left;
+         font-family: 'Arial Narrow';
+         font-size: 18px; 
+         font-weight: normal; 
+         font-style:normal; 
+         font-variant:normal; 
+         color: #FFFFFF;
+        }
+         
+         .TableLabel{
+         text-align:left;
+         font-family:sans-serif;
+         font-size: 13; 
+         font-weight: bold; 
+         font-style:normal; 
+         font-variant:normal; 
+         padding-left:20px;
+         width:200px;
+         height: 20px;
+        }
+        
+        .TableData{
+         text-align:left;
+         font-family: 'Arial Narrow';
+         font-size: 18px; 
+         font-weight: normal; 
+         font-style:normal; 
+         font-variant:normal; 
+         color: #FFFFFF;
+         width: 200px;
+         height: 20px;
+        }
+        
+        .MRZ {
+		border: thin none #FFFFFF;
+		padding: 0px;
+		font-family: OCR-B;
+		font-size:large;
+		font-weight: normal;
+		text-align:center;
+		width: 520px;
+		color: #000000;
+		}
+		
+  		.MRZBox  {
+		padding: 0px;
+		margin: 0px;
+		}
+
+	    .BannerRepeatImage {background-image: url('header_filler.gif'); } 
+
+        .DataHeader
+        {
+        	text-align:center;
+        	font-family:sans-serif;
+         	font-size: 32px; 
+         	font-weight: bold; 
+         	font-style:normal; 
+         	font-variant:normal;
+            height:30px;
+        }
+        .style4 {
+	vertical-align: middle;
+}
+    </style>
+</head>
+<body>
+
+
+
+<div style="position: absolute; width: 182px; height: 22px; z-index: 2; left: 49px; top: 40px" 
+    id="layer2" class="clsSecuritySystemsCaption">
+	3M Security Systems</div>
+
+<div style="position: absolute; width: 620px; height: 40px; z-index: 1; left: 336px; top: 33px"         
+    id="ProductCaption" class="clsProductCaption">
+    3M<sup><span class="clsProductCaptionTM">TM</span></sup> CR100 Compact Reader</div>
+
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+        <tr >
+            <td>
+                <img alt="" src="header_left.gif" /></td>
+            <td style="width:100%" class="BannerRepeatImage">
+                </td>
+            <td >
+                <img alt="" src="header_right.gif" /></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr />
+            </td>
+        </tr>
+    </table>
+   
+
+ <p>
+        <br />
+    </p>
+    
+    
+    <table style="width: 100%; height: 30px;" id="dataTitle">
+        <tr class="DataHeader">
+            <td class="DataHeader" 
+                style=" width: 50%; border: 0;">
+                &nbsp;OCR Codeline Data</td>
+             
+            <td 
+                class="DataHeader">
+                &nbsp;</td>
+             
+            <td 
+                class="DataHeader">
+                &nbsp;</td>
+             
+            <td 
+                class="DataHeader">
+                &nbsp;</td>
+        </tr>
+        <tr style="height: 300px">
+            <td style=" width: 50%; border: thin double #808080; ">
+                	<form name="form1" method="post" action="" style="border:0; height: 100%; width: 100%">    
+            <table style="width:100%;"  id="ocr">
+        <tr>
+            <td class="TableLabel"  >
+                Surname</td>
+            <td class="TableData" >
+                <input id="Surname" name="Surname" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Given Name(s)</td>
+            <td class="TableData">
+                <input id="GivenName" name="GivenName" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Date of Birth</td>
+            <td class="TableData" >
+                <input id="DoB" name="DoB" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel">
+                Gender</td>
+            <td class="TableData">
+                <input id="Sex" name="Sex" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel">
+                Nationality</td>
+            <td class="TableData">
+                <input id="Nationality" name="Nationality" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Document Type</td>
+            <td class="TableData">
+                <input id="DocumentType" name="DocumentType" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Document Number</td>
+            <td class="TableData">
+                <input id="DocumentNumber" name="DocumentNumber" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Expiry Date</td>
+            <td class="TableData">
+                <input id="DoE" name="DoE" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td class="TableLabel" >
+                Issuer</td>
+            <td class="TableData">
+                <input id="Issuer" name="Issuer" type="text" style="width: 300px" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left" style="height: 7px; border-bottom-style: groove; border-bottom-width: medium; border-bottom-color: #C0C0C0; width: 100%; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px;">
+                </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2"  style="height: 10px"></td>
+        </tr>
+
+                
+        <tr>
+            <td colspan="2" class="MRZBox" align="center" style="height: 10px">
+                <input id="MRZ1" name="MRZ1" type="text" align="left" class="MRZ" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" style="height: 10px" class="MRZBox">
+                <input id="MRZ2" name="MRZ2" type="text" align="left" class="MRZ" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" style="height: 10px" class="MRZBox">
+                <input id="MRZ3" name="MRZ3" type="text" align="left" class="MRZ" /></td>
+        </tr>
+    </table>
+</form>
+               
+                </td>
+             
+            <td 
+                style="  border-style: none; border-color: inherit; border-width: 0; width: 407px; height: 300px;">
+                &nbsp;</td>
+             
+            <td 
+                style="  border-style: none; border-color: inherit; border-width: 0; width: 407px; height: 300px;">
+                <img alt="" src="CR100.jpg" align="left" width="450" dir="ltr" class="style4" /></td>
+             
+            <td 
+                style="  border-style: none; border-color: inherit; border-width: 0; width: 407px; height: 300px;">
+                &nbsp;</td>
+        </tr>
+    </table>
+    <p>
+        &nbsp;</p>
+    <div dir="rtl" style="height: 71px; margin-right: 0px">
+        <img alt="" width="100" src="3mlogo.gif" /></div>
+
+<applet name="MyApplet" 
+		code="swipeapplet.SwipeApplet.class" 
+		archive="MRZViewerApplet.jar,mmmreader.jar" style="width: 400px; height: 50px">
+		
+		Browser Does not support Java
+</applet>
+</body>
+
+</html>
