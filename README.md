@@ -23,6 +23,7 @@ This software requires:
 
 
 INSTRUCTIONS:
+
   1 - Connect the device to usb port
   
   2 - Run the program with root priveleges (I recommend to export the .jar file and run "sudo java -jar IDReader.jar")
