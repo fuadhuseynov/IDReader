@@ -6,7 +6,7 @@ I decided to share it because it was very difficult for us to find any source co
 We got samples from the company (and I would like to thank them for that) and simplified it in order to ease its implementation in the future.
 
 This software requires:
-  - libusb (apt-get install libusb)
+  - libusb 1.0 (apt-get install libusb)
   - MMMReader Java interface/library (included in the soure code - "mmmreader.jar")
  in order to function normally.
  
